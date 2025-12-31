@@ -15,7 +15,7 @@ class cityService {
 
     async deletecity(cityid) {
         try {
-            return await this.cityrepository.deleteCity(cityid); // ✅ FIX
+            return await this.cityrepository.deleteCity(cityid); 
         } catch (error) {
             throw error;
         }
@@ -34,6 +34,13 @@ class cityService {
             return await this.cityrepository.getCity(cityid);
         } catch (error) {
             throw error;
+        }
+    }
+    async getallcities(filter){
+        try{
+            return await this.cityrepository.getAllCities({name:filter.name});
+        }catch(error){
+            throw(error);
         }
     }
 }

@@ -3,7 +3,6 @@ const app = express();
 
 const { PORT } = require("./config/serverconfig.js");
 const ApiRoutes = require("./routes/index");
-const bodyParser = require("body-parser");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
