@@ -5,8 +5,8 @@ const { PORT } = require("./config/serverconfig.js");
 const ApiRoutes = require("./routes/index");
 const bodyParser = require("body-parser");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", ApiRoutes);
 

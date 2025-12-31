@@ -17,7 +17,7 @@ const create = async (req, res) => {
             data: {},
             success: false,
             message: "Not able to create city",
-            err: error
+            err: error.message 
         });
     }
 };
