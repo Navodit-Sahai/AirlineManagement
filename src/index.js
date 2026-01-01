@@ -4,7 +4,7 @@ const app = express();
 const { PORT } = require("./config/serverconfig.js");
 const ApiRoutes = require("./routes/index");
 const db=require("./models/index");
-const {Airplane}=require("./models/index");
+// const {Airplane}=require("./models/index");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,9 +19,6 @@ const setupAndStartServer = async () => {
     if(process.env.SYNC_DB){
         db.sequelize.sync({alter:true});
     }
-    await Airplane.create({
-        modelNumber:'Bombardier CRJ'
-    })
   } catch (error) {
     console.error("Server start error:", error);
   }

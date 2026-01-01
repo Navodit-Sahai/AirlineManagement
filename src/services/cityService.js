@@ -40,7 +40,7 @@ class cityService {
         try{
             return await this.cityrepository.getAllCities({name:filter.name});
         }catch(error){
-            throw(error);
+            throw{error};
         }
     }
 }
